@@ -9,6 +9,7 @@ export default defineNuxtConfig({
   modules: ["@primevue/nuxt-module", "@nuxtjs/tailwindcss", "@nuxt/eslint"],
 
   primevue: {
+    autoImport: true,
     options: {
       theme: {
         preset: Aura,
@@ -28,4 +29,6 @@ export default defineNuxtConfig({
   },
 
   eslint: {},
+
+  pages: true,
 });

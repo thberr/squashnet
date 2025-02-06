@@ -1,3 +1,11 @@
+<script setup lang="ts">
+useHead({
+  title: "Squashnet",
+});
+</script>
+
 <template>
-  <div></div>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
