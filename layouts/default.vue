@@ -8,15 +8,15 @@ const screenSize = ref<number>(1);
 const navbarItems = ref<MenuItem[]>([
   {
     label: "Compétitions",
-    url: "tournaments",
+    url: "/tournaments",
   },
   {
     label: "Résultats",
-    url: "results",
+    url: "/results",
   },
   {
     label: "Classement",
-    url: "ranking",
+    url: "/ranking",
   },
   {
     label: "FFSquash",
@@ -28,12 +28,12 @@ const profileMenuItems = ref<MenuItem[]>([
   {
     label: "Mon profil",
     icon: "material-symbols:person",
-    url: "",
+    url: "/",
   },
   {
     label: "Se déconnecter",
     icon: "material-symbols:logout",
-    url: "",
+    url: "/",
   },
 ]);
 
