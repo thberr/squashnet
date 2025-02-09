@@ -6,7 +6,13 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
-  modules: ["@primevue/nuxt-module", "@nuxtjs/tailwindcss", "@nuxt/eslint"],
+  modules: [
+    "@primevue/nuxt-module",
+    "@nuxtjs/tailwindcss",
+    "@nuxt/eslint",
+    "@nuxt/image",
+    "@nuxt/icon",
+  ],
 
   primevue: {
     autoImport: true,
