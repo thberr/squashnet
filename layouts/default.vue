@@ -2,6 +2,8 @@
 import type { MenuMethods } from "primevue";
 import type { MenuItem } from "primevue/menuitem";
 
+// "Hydration completed but contains mismatches" error will be automatically fixed when the slot will be filled by something
+
 // TODO : get the real time screen size so the avatar can update it's size
 const screenSize = ref<number>(1);
 
