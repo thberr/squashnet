@@ -4,9 +4,6 @@ import type { MenuItem } from "primevue/menuitem";
 
 // "Hydration completed but contains mismatches" error will be automatically fixed when the slot will be filled by something
 
-// TODO : get the real time screen size so the avatar can update it's size
-const screenSize = ref<number>(1);
-
 const navbarItems = ref<MenuItem[]>([
   {
     label: "Compétitions",
@@ -72,7 +69,7 @@ const toggleProfileMenu = (event: Event) => {
     <template #end>
       <Avatar
         shape="circle"
-        :size="screenSize > 2 ? 'large' : 'xlarge'"
+        size="xlarge"
         class="cursor-pointer"
         @click="toggleProfileMenu"
       >
