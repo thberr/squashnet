@@ -49,7 +49,13 @@ const columns: { field: keyof Player; header: string }[] = [
     :rows="2"
     :rowsPerPageOptions="[2, 5, 10, 20, 50]"
     striped-rows
+    class="p-8"
   >
+    <template #header>
+      <div class="flex justify-center text-2xl mb-4 mt-4">
+        Consulter le classement
+      </div>
+    </template>
     <Column
       v-for="col of columns"
       :key="col.field"
