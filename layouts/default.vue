@@ -43,53 +43,57 @@ const toggleProfileMenu = (event: Event) => {
 </script>
 
 <template>
-  <Menubar :model="navbarItems" class="p-4 flex gap-8">
-    <template #start>
-      <NuxtLink to="/">
-        <NuxtPicture
-          src="img/logo_squashnet.png"
-          alt="Logo Squashnet"
-          sizes="200px"
-        />
-      </NuxtLink>
-    </template>
-
-    <template #buttonicon>
-      <Icon name="material-symbols:menu" class="text-3xl" />
-    </template>
-
-    <template #item="{ item }">
-      <div class="p-3">
-        <NuxtLink :to="item.url">
-          <span class="text-xl md:text-2xl">{{ item.label }}</span>
+  <div class="flex flex-col h-screen">
+    <Menubar :model="navbarItems" class="p-4 flex gap-8">
+      <template #start>
+        <NuxtLink to="/">
+          <NuxtPicture
+            src="img/logo_squashnet.png"
+            alt="Logo Squashnet"
+            sizes="200px"
+          />
         </NuxtLink>
-      </div>
-    </template>
+      </template>
 
-    <template #end>
-      <Avatar
-        shape="circle"
-        size="xlarge"
-        class="cursor-pointer"
-        @click="toggleProfileMenu"
-      >
-        <template #icon>
-          <Icon name="material-symbols:person" size="xlarge" />
-        </template>
-      </Avatar>
+      <template #buttonicon>
+        <Icon name="material-symbols:menu" class="text-3xl" />
+      </template>
 
-      <Menu
-        ref="profileMenu"
-        :model="profileMenuItems"
-        :popup="true"
-        class="text-lg"
-      >
-        <template #itemicon="{ item }">
-          <Icon :name="item.icon!" class="text-3xl" />
-        </template>
-      </Menu>
-    </template>
-  </Menubar>
+      <template #item="{ item }">
+        <div class="p-3">
+          <NuxtLink :to="item.url">
+            <span class="text-xl md:text-2xl">{{ item.label }}</span>
+          </NuxtLink>
+        </div>
+      </template>
 
-  <slot />
+      <template #end>
+        <Avatar
+          shape="circle"
+          size="xlarge"
+          class="cursor-pointer"
+          @click="toggleProfileMenu"
+        >
+          <template #icon>
+            <Icon name="material-symbols:person" size="xlarge" />
+          </template>
+        </Avatar>
+
+        <Menu
+          ref="profileMenu"
+          :model="profileMenuItems"
+          :popup="true"
+          class="text-lg"
+        >
+          <template #itemicon="{ item }">
+            <Icon :name="item.icon!" class="text-3xl" />
+          </template>
+        </Menu>
+      </template>
+    </Menubar>
+
+    <slot />
+
+    <Footer />
+  </div>
 </template>
