@@ -47,6 +47,10 @@ const carouselResponsiveOptions = ref<CarouselResponsiveOptions[]>([
         <div class="flex justify-center text-2xl mb-8">LES PARTENAIRES</div>
       </template>
 
+      <template #previcon>
+        <Icon name="material-symbols:chevron-left-rounded" size="60px" />
+      </template>
+
       <template #item="partner">
         <div class="flex h-full justify-center items-center">
           <NuxtPicture
@@ -55,6 +59,10 @@ const carouselResponsiveOptions = ref<CarouselResponsiveOptions[]>([
             sizes="120px"
           />
         </div>
+      </template>
+
+      <template #nexticon>
+        <Icon name="material-symbols:chevron-right-rounded" size="60px" />
       </template>
     </Carousel>
 
